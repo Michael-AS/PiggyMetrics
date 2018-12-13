@@ -17,7 +17,7 @@ pipeline {
         }
 
         stage("Build") {
-            sh "mvn install -DskipTests
+            sh "mvn install -DskipTests"
         }
 
         stage("Package") {
@@ -69,7 +69,7 @@ pipeline {
 
             turbineStreamServiceImage.push()
             turbineStreamServiceImage.push("latest")
-            
+
         }
 
 
