@@ -1,7 +1,5 @@
 node {
 
-    def mvn = "${env.JENKINS_HOME}/apache-maven-3.6.0/bin/mvn"
-
     stage("Setup") {
         deleteDir()
     }
@@ -11,11 +9,11 @@ node {
     }
 
     stage("Build") {
-        sh "${mvn} install -DskipTests"
+        sh "mvn install -DskipTests"
     }
 
     stage("Test") {
-        sh "${mvn} test"
+        sh "mvn test"
     }
 
     stage("Package") {
