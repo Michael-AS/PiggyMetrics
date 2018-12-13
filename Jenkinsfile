@@ -1,13 +1,13 @@
 node {
 
     stage("Setup") {
-        deleteDir()
+ //       deleteDir()
     }
 
     stage("Clone") {
-        checkout scm
+   //     checkout scm
     }
-
+/*
     stage("Build") {
         sh "mvn install -DskipTests"
     }
@@ -15,7 +15,7 @@ node {
     stage("Test") {
         sh "mvn test"
     }
-
+*/
     stage("Package") {
 
         def accountServiceImage = docker.build("michaelas/piggymetrics-account-service:${env.BUILD_ID}", "./account-service/")
