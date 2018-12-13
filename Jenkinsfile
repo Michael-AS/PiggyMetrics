@@ -12,9 +12,9 @@ node {
         sh "mvn install -DskipTests"
     }
 
-    //stage("Test") {
-    //    sh "mvn test"
-    //}
+    stage("Test") {
+        sh "mvn test"
+    }
 
     stage("Package") {
 
