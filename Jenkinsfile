@@ -12,11 +12,9 @@ node {
         sh "mvn install -DskipTests"
     }
 
-    stage("Test") {
-        withEnv(['M2_HOME=/usr/share/maven', 'M2=/usr/share/maven/bin']) {
-            sh "mvn test"
-        }
-    }
+    //stage("Test") {
+    //    sh "mvn test"
+    //}
 
     stage("Package") {
 
