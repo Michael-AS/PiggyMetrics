@@ -13,7 +13,9 @@ node {
     }
 
     stage("Test") {
-        sh "mvn test"
+        withEnv(['M2_HOME=/usr/share/maven', 'M2=/usr/share/maven/bin']) {
+            sh "mvn test"
+        }
     }
 
     stage("Package") {
