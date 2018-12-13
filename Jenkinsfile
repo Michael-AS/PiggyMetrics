@@ -25,7 +25,7 @@ node {
         def mongoDbImage = docker.build("michaelas/piggymetrics-mongodb:${env.BUILD_ID}", "./mongodb/")
         def monitoringImage = docker.build("michaelas/piggymetrics-monitoring:${env.BUILD_ID}", "./monitoring/")
         def notificationServiceImage = docker.build("michaelas/piggymetrics-notification-service:${env.BUILD_ID}", "./notification-service/")
-        def registryImage = docker.build("michaelas/piggymetrics-registry:${env.BUILD_ID}", "./registry/Dockerfile")
+        def registryImage = docker.build("michaelas/piggymetrics-registry:${env.BUILD_ID}", "./registry/")
         def statisticsServiceImage = docker.build("michaelas/piggymetrics-statistics-service:${env.BUILD_ID}", "./statistics-service/")
         def turbineStreamServiceImage = docker.build("michaelas/piggymetrics-turbine-stream-service:${env.BUILD_ID}", "./turbine-stream-service/")
 
