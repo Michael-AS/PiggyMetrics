@@ -55,7 +55,7 @@ public class AccountServiceTest {
 
 	@Test
 	public void shouldCreateAccountWithGivenUser() {
-		assertEquals(1,0);
+		//assertEquals(1,0);
 		User user = new User();
 		user.setUsername("test");
 
