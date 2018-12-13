@@ -61,7 +61,7 @@ node {
     }
 
     stage("Deploy") {
-        
+       # sh "kubectl apply -f ./deploy/k8s"
     }
 
 }

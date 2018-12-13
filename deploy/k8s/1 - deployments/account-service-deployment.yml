@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: account-service-deployment
+  namespace: production
+  labels:
+    app: account-service-deployment
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: account-service-deployment
+  template:
+    metadata:
+      labels:
+        app: account-service-deployment
+    spec:
+      containers:
+        - name: account-service-container
+          image: michaelas/piggymetrics-account-service:latest
+          ports:
+            - containerPort: 6000

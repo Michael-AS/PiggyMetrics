@@ -11,7 +11,6 @@ public class AccountServiceApplicationTests {
 
 	@Test
 	public void contextLoads() {
-
 	}
 
 }
